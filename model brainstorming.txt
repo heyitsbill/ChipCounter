@@ -1,0 +1,27 @@
+User
+username
+display name
+password
+//todo email
+
+Room
+has many users
+has many bets
+blind info
+name
+password
+state
+
+
+bet
+Round
+
+RoomUser
+sit in/out
+
+Log
+-sit in/sit out
+-refill
+-counts
+
+
