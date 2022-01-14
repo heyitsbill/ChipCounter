@@ -1,0 +1,13 @@
+<h1> Login </h1>
+<%=flash[:success] if (flash[:success])%>
+<%=flash[:error] if(flash[:error])%>
+
+<%=form_tag "/login", method: "post" do %>
+<%=label_tag "user[username]", "Username:"%>
+<%=text_field_tag "user[username]"%>
+<%=label_tag "user[password]", "Password:"%>
+<%=password_field_tag "user[password]"%>
+<%=submit_tag "Sign In"%>
+<% end %>
+
+<p> Don't have an account? Create one <%= link_to 'here', create_account_path %>!</p>

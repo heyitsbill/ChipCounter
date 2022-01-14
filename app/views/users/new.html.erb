@@ -1,0 +1,30 @@
+<h1> Sign Up a New User </h1>
+<%=form_for :user, url:"/create_account" do |f|%>
+    <%=f.label :username%>
+    <%=f.text_field :username %>
+    <br>
+    <%=f.label :display_name%>
+    <%=f.text_field :display_name %>
+    <br>
+    <%=f.label :password%>
+    <%=f.password_field :password %>
+    <br>
+    <%=f.label :password_confirmation%>
+    <%=f.password_field :password_confirmation %>
+    <br>
+    <%=f.submit "Create New User"%>
+<% end %>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+    <ul>
+      <% @user.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<p> Already have an account? Sign in <%= link_to 'here', login_path %></p>
