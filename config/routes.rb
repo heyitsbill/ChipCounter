@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get '/', to: "sessions#index"
-  get 'login', to: "sessions#new"
+  get 'login', to: "sessions#new" 
   post 'login', to: "sessions#create"
   get '/create_account', to: "sessions#new_account"
   post '/create_account', to: "sessions#create_account"
@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   get '/menu', to: "users#menu"
   get '/create_room', to: "rooms#new"
   post '/create_room', to: "rooms#create"
-  get '/rooms/id', to: "rooms#show"
   get '/join_room', to: "rooms#join"
-  get '/browse_rooms', to: "rooms#browse"
+  get '/my_rooms', to: "rooms#my_rooms"
   get '/profile', to: "users#profile"
+  get '/rooms/:id', to: "rooms#show"
 end
