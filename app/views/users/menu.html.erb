@@ -1,2 +1,13 @@
 Hi  <%= @user.display_name %> <%= button_to "Log Out", signout_path, :method => :delete , class:"btn"%>
 
+<br>
+<%= button_to "Create Room", create_room_path %>
+<br>
+<%= button_to "Join Room", join_room_path %>
+<br>
+<%= button_to "Browse Rooms", browse_rooms_path %>
+<br>
+<%= button_to "View Profile", profile_path %>
+
+
+

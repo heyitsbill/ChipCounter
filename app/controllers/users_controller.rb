@@ -1,34 +1,14 @@
 class UsersController < ApplicationController
-    before_action :redirect_if_not_signed_in, only: [:show, :edit]
-  
-    def index
-        if signed_in?
-            redirect_to "/menu"
-        end
-    end
-
-    def new
-      @user = User.new
-    end
+    before_action :redirect_if_not_signed_in
   
     def menu
         @user = current_user
     end
 
-    def create
-      @user = User.new(user_params)
-      if @user.save
-        flash[:success] = "User successfully created"
-        session[:user_id] = @user.id
-        redirect_to "/profile"
-      else
-        render "new"
-      end
+    def profile
+
     end
-  
-    def user_params
-      params.require(:user).permit(:username, :display_name, :password, :password_confirmation)
-    end
+    
   
     def show
       #byebug
