@@ -9,6 +9,8 @@ has many users
 has many bets
 blind info
 name
+code
+creator
 password
 state
 
