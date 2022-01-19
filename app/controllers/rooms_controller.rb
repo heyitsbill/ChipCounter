@@ -46,7 +46,7 @@ class RoomsController < ApplicationController
 
     def my_rooms
         #render 'sessions/index.html.erb'
-        
+        @myrooms = current_user.rooms
     end
 
     def show

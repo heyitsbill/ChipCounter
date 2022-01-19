@@ -1,0 +1,19 @@
+<h1> My Rooms </h1>
+
+<table>
+    <tr>
+        <th>Room Name</th>
+        <th>Room Code</th>
+        <th># members</th>
+        <th></th>
+        <th>Description</th>
+    </tr>
+
+    <%@myrooms.each do |room|%>
+        <th><%=room.name%></th>
+        <th><%=room.code%></th>
+        <th><%=room.users.length%></th>
+        <th><%= link_to 'Enter', "/rooms/#{room.id}" %></th>
+        <th><%=room.description%></th>
+    <%end%>
+</table>
