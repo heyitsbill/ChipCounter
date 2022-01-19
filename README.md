@@ -1,7 +1,18 @@
-# README
+# Chip Counter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Ruby on Rails App for a Chip Counter.
+
+## Features
+
+* Account Login
+
+* Multiple rooms
+
+* Call or Bet
+
+## To Be Supported
+
+* Side Pots
 
 Things you may want to cover:
 

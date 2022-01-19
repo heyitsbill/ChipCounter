@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/create_room', to: "rooms#new"
   post '/create_room', to: "rooms#create"
   get '/join_room', to: "rooms#join"
+  post '/join_room', to: "rooms#validate"
   get '/my_rooms', to: "rooms#my_rooms"
   get '/profile', to: "users#profile"
   get '/rooms/:id', to: "rooms#show"
